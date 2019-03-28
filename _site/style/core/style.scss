@@ -22,6 +22,28 @@ main {
     padding-top: 0;
 }
 
+.logo {
+    display: inline-block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    line-height: $logoSize;
+    color: white;
+    font-size: $fontSizeSmall;
+    @include opacity(.5);
+
+    img {
+        max-width: $logoSize;
+        display: inline-block;
+    }
+
+    &:hover {
+        color: white;
+        @include opacity(1);
+    }
+}
+
 /** Weather Card **/
 #weather-box {
     position: relative;
