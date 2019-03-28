@@ -48,7 +48,7 @@
   function getWeather(pos) {
     let latitude = pos.latitude;
     let longitude = pos.longitude;
-    let url = `https://api.darksky.net/forecast/[key]/${latitude},${longitude}?units=ca`;
+    let url = `https://api.darksky.net/forecast/24dfbe35483e5954d6da5665c468a40f/${latitude},${longitude}?units=ca`;
     $.ajax({
       type: 'GET',
       url: url,

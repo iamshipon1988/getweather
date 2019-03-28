@@ -246,9 +246,6 @@ section.add-spacer-sm {
 	width: 100%;
 	height: 100vh;
 	background: $bodyColorDark;
-	opacity: 0;
-	transition: opacity 1s linear;
-	visibility: hidden;
 
     .left {
         height: 100vh;
@@ -256,7 +253,7 @@ section.add-spacer-sm {
         .location {
             height: 30%;
             font-size: 20px;
-            display: block;
+            display: flex;
             padding: $padding-xl;
             text-align: center;
 

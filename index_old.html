@@ -1,0 +1,106 @@
+---
+layout: default
+title:  Get Weather Info
+bodyID: homePage
+---
+<div id="weather-box" style="visibility: visible; opacity: 1;">
+        <div class="row">
+            <div class="col-lg-5 col-xl-4 left">
+                <div class="location">
+                    <div id="location"></div>
+                    <div id="time"></div>
+                    <div id="summary"></div>
+                </div>
+                <div id="weather" class="temperature">
+                    <canvas id="icon0" width="128" height="128"></canvas>
+                    <div>
+                        <div id="temperature-holder">
+                            <div id="temperature"></div>
+                            <div id="temperature-format">
+                                <a id="changeFormat" href="javascript:void(0);">°C</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <div id="additional">
+          <div>
+            <!-- precipitation -->
+            <div>
+              Precipitation:
+              <span id="precipitation">0%</span>
+            </div>
+            <!-- humidity -->
+            <div>
+              Humidity:
+              <span id="humidity">45%</span>
+            </div>
+            <!-- windSpeed -->
+            <div>
+              Windspeed:
+              <span id="windSpeed">14 km/h</span>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="bottom col-lg-7 col-xl-8">
+    <div class="wrapper2">
+      <div class="future">
+        <div class="day">Thu</div>
+        <canvas id="icon1" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max0">7°</div>
+          <div class="min" id="min0">1°</div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day">Fri</div>
+        <canvas id="icon2" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max1">11°</div>
+          <div class="min" id="min1">2°</div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day">Sat</div>
+        <canvas id="icon3" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max2">16°</div>
+          <div class="min" id="min2">8°</div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day">Sun</div>
+        <canvas id="icon4" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max3">17°</div>
+          <div class="min" id="min3">9°</div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day">Mon</div>
+        <canvas id="icon5" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max4">14°</div>
+          <div class="min" id="min4">8°</div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day">Tue</div>
+        <canvas id="icon6" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max5">12°</div>
+          <div class="min" id="min5">4°</div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day">Wed</div>
+        <canvas id="icon7" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max6">10°</div>
+          <div class="min" id="min6">5°</div>
+        </div>
+      </div>
+    </div>
+  </div>
+    </div>
+</div>
