@@ -13,18 +13,6 @@
 @import "base";
 @import "classhelper";
 
-/** Loader **/
-@import "components/loader";
-
-/** Components **/
-@import "components/cards";
-@import "components/gallery";
-@import "components/icons";
-@import "components/breadcrumb";
-@import "components/pagination";
-@import "components/forms";
-@import "components/tables";
-
 /** Main **/
 body {
     background: $bodyColorDark;
@@ -34,217 +22,7 @@ main {
     padding-top: 0;
 }
 
-section.add-spacer {
-    padding-top: 5*$padding-xl;
-    padding-bottom: 5*$padding-xl;
-}
-
-section.add-spacer-sm {
-    padding-top: 3*$padding-xl;
-    padding-bottom: 3*$padding-xl;
-}
-
-.title {
-    margin-bottom: 2*$padding-xl;
-    font-family: $fontHeader;
-
-    h4 {
-        font-size: $fontSizeLarge;
-        color: $textColorLight;
-        margin-bottom: $padding;
-    }
-
-    h1 {
-        font-size: $fontHeaderSize;
-        color: #252525;
-        letter-spacing: 0.6px;
-        line-height: 1.5*$fontHeaderSize;
-
-        span {
-            color: $primaryColor;
-        }
-    }
-}
-
-.button {
-    @extend %button;
-    position: relative;
-    display: inline-block;
-    height: $inputSize;
-    padding-top: $padding-sm + 3px;
-    $b: &;
-
-    &:hover {
-        color: white;
-        background: $primaryColor;
-    }
-
-    &-outline {
-        background: white;
-        border: 1px solid $borderColor;
-        color: $textColor;
-    }
-
-    &-sm {
-        height: $inputSizeSm;
-        line-height: $inputSizeSm;
-        padding-top: 0;
-        padding-bottom: 0;
-        font-size: $fontSizeSmall;
-    }
-
-    &-no-shadow {
-        @include box-shadow(none);
-    }
-
-    &-block {
-        display: block;
-    }
-
-
-    &.button-app-store {
-        background: white;
-    	color: $primaryColor;
-    	position: relative;
-    	padding: $padding $padding-xl $padding 3*$padding-xl;
-        height: auto;
-        border: 2px solid $borderColor;
-        @include border-radius(5px);
-
-        &:before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 100%;
-            width: 100%;
-            height: 100%;
-            display: block;
-            background: $primaryColor;
-            z-index: -1;
-            @include opacity(0);
-            @include transition(all .2s ease-out);
-        }
-
-        i {
-        	font-size: $fontHeaderSize;
-        	position: absolute;
-        	left: $padding-xl;
-            @include transition(all .2s ease);
-        }
-
-        .small {
-        	display: block;
-            font-size: $fontSizeSmall - 3px;
-        	line-height: $fontSizeSmall;
-            margin-top: 5px;
-            text-align: left;
-        }
-
-        .big {
-        	display: block;
-        	text-align: left;
-        	font-size: $fontSizeLarge + 2px;
-        	line-height: $fontSizeLarge +2px;
-            letter-spacing: .05em;
-        }
-
-        &:hover {
-            border-color: $primaryColor;
-            color: white;
-
-            span {
-                color: white;
-            }
-
-            i {
-                color: $primaryColor;
-            	left: $padding-lg - 1px;
-                @include transition(all .3s ease);
-            }
-
-            &:before {
-                height: 100%;
-                left: 2.5*$padding-xl;
-                @include opacity(1);
-                @include transition(all .2s linear);
-                @include border-radius(0);
-            }
-        }
-    }
-}
-
 /** Weather Card **/
-#spinner {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	width: 100px;
-	height: 100px;
-	border-radius: 100%;
-	transform: translate(-50%, -50%);
-	background: white;
-}
-
-#spinner:after {
-	position: absolute;
-	content: '';
-	display: block;
-	margin-left: -4px;
-	margin-top: -4px;
-	width: 100px;
-	height: 100px;
-	border-radius: 100%;
-	border: 4px solid transparent;
-	animation: spinAndGrow 1s ease infinite, rainbowBorder  5s linear infinite;
-}
-
-@keyframes spinAndGrow {
-  0% {
-    transform: scale(1) rotate(0);
-  }
-  50% {
-    transform: scale(1.4) rotate(270deg);
-  }
-  100% {
-    transform: scale(1) rotate(630deg);
-  }
-}
-
-@keyframes rainbowBorder {
-  0% {
-    border-top-color: #f00;
-    border-bottom-color: #f00;
-  }
-  14% {
-    border-top-color: #ff7f00;
-    border-bottom-color: #ff7f00;
-  }
-  28% {
-    border-top-color: #ff0;
-    border-bottom-color: #ff0;
-  }
-  42% {
-    border-top-color: #0c6;
-    border-bottom-color: #0c6;
-  }
-  56% {
-    border-top-color: #00bfff;
-    border-bottom-color: #00bfff;
-  }
-  70% {
-    border-top-color: #4b0082;
-    border-bottom-color: #4b0082;
-  }
-  86% {
-    border-top-color: #9400d3;
-    border-bottom-color: #9400d3;
-  }
-  100% {
-    border-top-color: #f00;
-    border-bottom-color: #f00;
-  }
-}
-
 #weather-box {
     position: relative;
 	width: 100%;
@@ -268,6 +46,10 @@ section.add-spacer-sm {
 
             #location, #time, #summary {
                 width: 100%;
+            }
+
+            #location {
+            	font-size: 30px;
             }
         }
 
@@ -324,53 +106,16 @@ section.add-spacer-sm {
         height: 100vh;
         padding: 0;
         background: $bodyColorDark;
+
+        .wrapper2 {
+        	display: flex;
+        	align-items: flex-end;
+        	position: absolute;
+        	bottom: 0;
+        	width: 100%;
+        	height: 100%;
+        }
     }
-}
-
-.top {
-	height: 25%;
-	font-size: 20px;
-	display: flex;
-	align-items: center;
-    padding: $padding $padding-xl;
-    text-align: center;
-
-    > div {
-        text-align: center;
-    	width: 100%;
-    }
-}
-
-.wrapper {
-	display: flex;
-	align-items: flex-start;
-	flex-direction: column;
-	position: relative;
-}
-
-#location {
-	font-size: 30px;
-}
-
-.middle {
-	height: 25%;
-	display: flex;
-	color: var(--color);
-}
-
-
-
-.additional-wrapper {
-	margin-left: 3em;
-}
-
-.wrapper2 {
-	display: flex;
-	align-items: flex-end;
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	height: 100%;
 }
 
 .future {
@@ -391,36 +136,25 @@ section.add-spacer-sm {
         @include box-shadow($boxShadowHover);
         @include transition(.2s all ease-in);
     }
-}
 
-.future .day {
-	text-align: center;
-}
+    .day {
+    	text-align: center;
+    }
 
-.future .icon {
-	font-size: 50px;
-}
+    .icon {
+    	font-size: 50px;
+    }
 
-.min-max-holder {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
+    .min-max-holder {
+    	display: flex;
+    	flex-direction: column;
+    	justify-content: center;
+    	align-items: center;
 
-.future .max {
-	color: #111;
-}
-
-.footer {
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 30%;
-  height: 4em;
-  bottom: 3.5em;
-  background: url('https://darksky.net/dev/img/attribution/poweredby.png') no-repeat center;
-  background-size: contain;
+        .max {
+            color: #111;
+        }
+    }
 }
 
 

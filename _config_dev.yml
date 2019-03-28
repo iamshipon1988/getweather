@@ -3,27 +3,26 @@ name:                Get Weather Info
 title:               Get Weather Info
 tagline:             Get weather in your location.
 author:              Sazzad Hossain
-author_email:        sazzad@beeback.io
+author_email:        sazzad@sazzad.me
 url:                 http://localhost:4000/
 baseurl:             ''
 permalink:           pretty
 exclude:             [README.markdown]
-analytics_id:        "UA-104952515-1"
+analytics_id:        ""
 
 # SEO information
 seo:
-    description: "Discover photogenic locations"
-    keywords: "bootstrap, admin, theme, panel, administration, material"
+    description: "Get weather in your location."
+    keywords: "weather, temperature, heat, cold, snow, rain"
 
 # Owner/author information
 owner:
     name:           EyePop App
     avatar:         logo.png
-    bio:            "Discover photogenic locations."
-    email:          sazzad@beeback.io
+    bio:            "Get weather in your location."
+    email:          sazzad@sazzad.me
     twitter:        iamshipon1988
     github:         iamshipon1988
-    instagram:      comingsoon
     location:       "New York, NY"
 
 
