@@ -5,7 +5,7 @@ tagline:             Get weather in your location.
 author:              Sazzad Hossain
 author_email:        sazzad@beeback.io
 url:                 https://iamshipon1988.github.io/getweather/
-baseurl:             ''
+baseurl:             https://iamshipon1988.github.io/getweather/
 permalink:           pretty
 exclude:             [README.markdown]
 analytics_id:        "UA-104952515-1"
