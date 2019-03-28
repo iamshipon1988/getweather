@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+    <!-- Le Basic Page Needs
+    ================================================== -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>
+        
+            Get Weather Info &middot; Get Weather Info
+        
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <script type="text/javascript">
+        var host = "bootadmin.org";
+        if ((host == window.location.host) && (window.location.protocol != "https:"))
+            window.location.protocol = "https";
+    </script>
+
+    <!-- Le Meta Data -->
+    <meta content="Get Weather Info" property="og:site_name">
+    <meta content="Get Weather Info" property="og:title">
+    <meta content="website" property="og:type">
+    <meta content="Discover photogenic locations" property="og:description">
+    <meta name="keywords" content="bootstrap, admin, theme, panel, administration, material">
+    
+    
+    <meta content="/images/logo.png" property="og:image">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@iamshipon1988">
+    <meta name="twitter:creator" content="@iamshipon1988">
+    
+    <meta name="twitter:title" content="Get Weather Info">
+    
+    
+    <meta name="twitter:description" content="">
+    
+
+    <!-- Le App Banner Data -->
+    <meta name="apple-itunes-app" content="app-id=1245521413">
+    <!--<meta name="apple-itunes-app" content="app-id=1245521413, affiliate-data=myAffiliateData, app-argument=myURL">-->
+
+    <!-- Le Mobile Specific Metas
+    ================================================== -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Le CSS
+    ================================================== -->
+    <link rel="stylesheet" href="/style/vendor/library.min.css">
+    <link rel="stylesheet" href="/style/core/style.min.css">
+
+    <!-- Le IE Conditionals
+    ================================================== -->
+    <!--[if lt IE 9]>
+	    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le Javascript Pre-loads
+    ================================================== -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Le Page Specific Codes
+    ================================================== -->
+    
+
+	<!-- Le Favicons
+	================================================== -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
+    <link rel="mask-icon" href="/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body id="landing">
+<div class="page-container">
+    <div id="homePage">
+        <main>
+            <!-- loading icon -->
+<div id="spinner"></div>
+<!-- weather! -->
+<div id="weather-box">
+  <div class="top">
+    <div class="wrapper">
+      <!-- location -->
+      <div id="location"></div>
+      <!-- time -->
+      <div id="time"></div>
+      <!-- summary -->
+      <div id="summary"></div>
+    </div>
+  </div>
+  <div class="middle">
+    <div id="weather">
+      <canvas id="icon0" width="128" height="128"></canvas>
+      <div>
+        <!-- temperature -->
+        <div id="temperature-holder">
+          <div id="temperature"></div>
+          <div id="temperature-format">
+            <a id="changeFormat" href="javascript:void(0);">°C</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="additional">
+      <div>
+        <!-- precipitation -->
+        <div>
+          Precipitation:
+          <span id="precipitation"></span>
+        </div>
+        <!-- humidity -->
+        <div>
+          Humidity:
+          <span id="humidity"></span>
+        </div>
+        <!-- windSpeed -->
+        <div>
+          Windspeed:
+          <span id="windSpeed"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="wrapper2">
+      <div class="future">
+        <div class="day"></div>
+        <canvas id="icon1" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max0"></div>
+          <div class="min" id="min0"></div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day"></div>
+        <canvas id="icon2" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max1"></div>
+          <div class="min" id="min1"></div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day"></div>
+        <canvas id="icon3" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max2"></div>
+          <div class="min" id="min2"></div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day"></div>
+        <canvas id="icon4" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max3"></div>
+          <div class="min" id="min3"></div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day"></div>
+        <canvas id="icon5" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max4"></div>
+          <div class="min" id="min4"></div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day"></div>
+        <canvas id="icon6" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max5"></div>
+          <div class="min" id="min5"></div>
+        </div>
+      </div>
+      <div class="future">
+        <div class="day"></div>
+        <canvas id="icon7" width="64" height="64"></canvas>
+        <div class="min-max-holder">
+          <div class="max" id="max6"></div>
+          <div class="min" id="min6"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </main>
+    </div>
+
+</div>
+
+<!-- Le Javascript -->
+<script src="https://cdn.rawgit.com/maxdow/skycons/master/skycons.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="/scripts/core/home.js"></script>
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-104952515-1', 'auto');
+    ga('send', 'pageview');
+</script>
+</body>
+</html>
