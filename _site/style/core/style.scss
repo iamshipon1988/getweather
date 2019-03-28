@@ -26,6 +26,10 @@
 @import "components/tables";
 
 /** Main **/
+body {
+    background: $bodyColorDark;
+}
+
 main {
     padding-top: 0;
 }
@@ -318,7 +322,6 @@ section.add-spacer-sm {
     .bottom {
         display: block;
         height: 100vh;
-        width: 60%;
         padding: 0;
         background: $bodyColorDark;
     }
@@ -421,51 +424,109 @@ section.add-spacer-sm {
 }
 
 
-@media screen and (max-width: 600px) {
-	#weather-box {
-		width: 95vw;
-	}
-
-	.top {
-		font-size: 16px;
-	}
-
-	.wrapper {
-		align-items: flex-start;
-	}
-
-	#location {
-		font-size: 20px;
-	}
-
-	#temperature {
-		font-size: 40px;
-	}
-
-	#temperature-format {
-		padding-top: 6px;
-		font-size: 16px;
-	}
-
-	#icon0 {
-		width: 64px;
-		height: 64px;
-	}
-
-	#additional {
-		font-size: 14px;
-		align-items: center;
-	}
-
-	.future > canvas {
-		width: 48px;
-		height: 48px;
-	}
-}
-
-
 /** Media Queries **/
 
 @media (max-width: ($grid-lg - 1px)) {
+    .row {
+        margin: 0;
+    }
 
+    #weather-box {
+        height: auto;
+        min-height: 100%;
+
+        .left {
+            width: 100%;
+            padding: 0;
+            z-index: 10;
+            @include box-shadow($boxShadowHover);
+
+            #icon0 {
+                width: 64px;
+                height: 64px;
+            }
+
+            .location {
+                #location {
+                    font-size: $fontSizeLarge;
+                }
+
+                #time {
+                    font-size: $fontSizeSmall;
+                    line-height: 1.2;
+                }
+            }
+
+            .temperature {
+                #temperature-holder {
+                    #temperature {
+                        font-size: 3*$fontHeaderSize;
+                    }
+
+                    #temperature-format {
+                        padding: 0;
+                    }
+                }
+            }
+
+            #additional {
+                font-size: $fontSizeSmall;
+
+                .pt-2, .pb-2 {
+                    padding: 0 !important;
+                }
+            }
+        }
+
+        .bottom {
+            width: 100%;
+            height: auto;
+
+            .wrapper2 {
+                display: block;
+                width: 100%;
+                min-height: 100vh;
+                height: auto;
+                position: relative;
+
+                .future {
+                    width: 100%;
+                    height: auto;
+                    padding: $padding-xl $padding;
+                    display: block;
+                    text-align: center;
+                    border-left: none;
+                    border-top: 1px solid $borderColor;
+                    @include box-shadow($boxShadowHover);
+
+                    > canvas {
+                		width: 48px;
+                		height: 48px;
+                	}
+
+                    .min-max-holder {
+                        display: block;
+
+                        .max, .min {
+                            display: inline-block;
+                            padding: 0 $padding-xs;
+                        }
+                        .max {
+                            font-weight: bold;
+                        }
+
+                        .min {
+                            &:before {
+                                content: "(";
+                            }
+
+                            &:after {
+                                content: "min )";
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
